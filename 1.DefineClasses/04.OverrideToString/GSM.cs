@@ -51,17 +51,33 @@ namespace _04.OverrideToString
             this.Model = model;
             this.Manufacturer = manufacturer;
             this.price = null;
-            Owner = null;
+            this.owner = null;
         }
 
         public GSM(string model, string manufacturer, decimal price) : this(model, manufacturer)
         {
-            this.Price = price;
+            if (Price < 0)
+            {
+                throw new ArgumentOutOfRangeException("Invalid value!");
+            }
+            else
+            {
+                this.price = Price;
+            }
+            this.owner = null;
         }
 
         public GSM(string model, string manufacturer, decimal price, string owner) : this(model, manufacturer, price)
         {
-            this.Owner = owner;
+            if (Price < 0)
+            {
+                throw new ArgumentOutOfRangeException("Invalid value!");
+            }
+            else
+            {
+                this.price = Price;
+            }
+            this.owner = Owner;
         }
 
         public override string ToString()
