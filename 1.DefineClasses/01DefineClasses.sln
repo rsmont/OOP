@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CapsulateWithProperties"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.StaticIphone4S", "06.StaticIphone4S\06.StaticIphone4S.csproj", "{70365F70-F480-4E93-AD84-D584A290FB19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.GSMTest", "07.GSMTest\07.GSMTest.csproj", "{EFB5CFCE-2A86-44ED-9659-C2FCC4A45861}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://luzterin.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -37,6 +39,9 @@ Global
 		SccProjectUniqueName6 = 06.StaticIphone4S\\06.StaticIphone4S.csproj
 		SccProjectName6 = 06.StaticIphone4S
 		SccLocalPath6 = 06.StaticIphone4S
+		SccProjectUniqueName7 = 07.GSMTest\\07.GSMTest.csproj
+		SccProjectName7 = 07.GSMTest
+		SccLocalPath7 = 07.GSMTest
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +72,10 @@ Global
 		{70365F70-F480-4E93-AD84-D584A290FB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70365F70-F480-4E93-AD84-D584A290FB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70365F70-F480-4E93-AD84-D584A290FB19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB5CFCE-2A86-44ED-9659-C2FCC4A45861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB5CFCE-2A86-44ED-9659-C2FCC4A45861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB5CFCE-2A86-44ED-9659-C2FCC4A45861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB5CFCE-2A86-44ED-9659-C2FCC4A45861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
