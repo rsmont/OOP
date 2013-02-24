@@ -8,12 +8,41 @@ namespace _04.OverrideToString
         public Display Display = new Display();
         public Battery Battery = new Battery("");
         public Battery.BatteryType TypeOfBattery;
+        private decimal? price;
+        private string owner;
 
-        public string Model { get; set; }
+        public string Model { get ; set; }
 
-        public decimal Price { get; set; }
+        public decimal? Price
+        {
+            get
+            {
+                return price;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid Price!");
+                }
+                else
+                {
+                    this.price = value;
+                }
+            }
+        }
 
-        public string Owner { get; set; }
+        public string Owner
+        {
+            get
+            {
+                return owner;
+            }
+            set
+            {
+                this.owner = value;
+            }
+        }
 
         public string Manufacturer { get; set; }
 
@@ -21,7 +50,7 @@ namespace _04.OverrideToString
         {
             this.Model = model;
             this.Manufacturer = manufacturer;
-            Price = 0.0m;
+            this.price = null;
             Owner = null;
         }
 
