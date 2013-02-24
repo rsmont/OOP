@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace _04.OverrideToString
+namespace _05.CapsulateWithProperties
 {
     class GSM
     {

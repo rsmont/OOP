@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.AddEnumeration", "03.Def
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.OverrideToString", "04.OverrideToString\04.OverrideToString.csproj", "{8C08636F-506E-4CB2-9166-9FF586997642}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CapsulateWithProperties", "05.CapsulateWithProperties\05.CapsulateWithProperties.csproj", "{C5A56B37-AC48-4EC1-A43A-49CB7E74B8AB}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://luzterin.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -27,6 +29,9 @@ Global
 		SccProjectUniqueName4 = 03.DefineClass\\03.AddEnumeration.csproj
 		SccProjectName4 = 03.DefineClass
 		SccLocalPath4 = 03.DefineClass
+		SccProjectUniqueName5 = 05.CapsulateWithProperties\\05.CapsulateWithProperties.csproj
+		SccProjectName5 = 05.CapsulateWithProperties
+		SccLocalPath5 = 05.CapsulateWithProperties
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +54,10 @@ Global
 		{8C08636F-506E-4CB2-9166-9FF586997642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C08636F-506E-4CB2-9166-9FF586997642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C08636F-506E-4CB2-9166-9FF586997642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A56B37-AC48-4EC1-A43A-49CB7E74B8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A56B37-AC48-4EC1-A43A-49CB7E74B8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A56B37-AC48-4EC1-A43A-49CB7E74B8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A56B37-AC48-4EC1-A43A-49CB7E74B8AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿using System;
-using _04.OverrideToString;
+using _05.CapsulateWithProperties;
 
 
 class MainClass
@@ -20,6 +20,7 @@ class MainClass
 
         gsm1.Owner = "Pencho";
         
-        Console.WriteLine(gsm1);      
+        Console.WriteLine(gsm1);
+
     }
 }

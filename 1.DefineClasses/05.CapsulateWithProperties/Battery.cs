@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04.OverrideToString
+namespace _05.CapsulateWithProperties
 {
     class Battery
     {
@@ -55,6 +55,7 @@ namespace _04.OverrideToString
             {
                 return typeOfBattery;
             }
+
         }
 
         private string model;

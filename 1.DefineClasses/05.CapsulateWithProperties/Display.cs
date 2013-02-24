@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04.OverrideToString
+namespace _05.CapsulateWithProperties
 {
     class Display
     {
