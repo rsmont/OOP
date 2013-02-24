@@ -14,6 +14,8 @@ namespace _01.DefineClass
 
         public string Owner { get; set; }
 
-        public string Manifacturer { get; set; }
+        public string Manufacturer { get; set; }
+
+
     }
 }

@@ -3,15 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DefineClass", "01.DefineClass\01.DefineClass.csproj", "{E552BA97-081E-4A06-9E51-9A6B18E0BC4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DefineConstructors", "02.DefineClass\02.DefineConstructors.csproj", "{3A1E7C38-0EEA-4E12-94C6-70DBBB0957A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.AddEnumeration", "03.DefineClass\03.AddEnumeration.csproj", "{C1F40F65-DF9C-4471-ADD8-A1B39EC20B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.OverrideToString", "04.OverrideToString\04.OverrideToString.csproj", "{8C08636F-506E-4CB2-9166-9FF586997642}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://luzterin.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = 01.DefineClass\\01.DefineClass.csproj
 		SccProjectName1 = 01.DefineClass
 		SccLocalPath1 = 01.DefineClass
+		SccProjectUniqueName2 = 04.OverrideToString\\04.OverrideToString.csproj
+		SccProjectName2 = 04.OverrideToString
+		SccLocalPath2 = 04.OverrideToString
+		SccProjectUniqueName3 = 02.DefineClass\\02.DefineConstructors.csproj
+		SccProjectName3 = 02.DefineClass
+		SccLocalPath3 = 02.DefineClass
+		SccProjectUniqueName4 = 03.DefineClass\\03.AddEnumeration.csproj
+		SccProjectName4 = 03.DefineClass
+		SccLocalPath4 = 03.DefineClass
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +37,18 @@ Global
 		{E552BA97-081E-4A06-9E51-9A6B18E0BC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E552BA97-081E-4A06-9E51-9A6B18E0BC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E552BA97-081E-4A06-9E51-9A6B18E0BC4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A1E7C38-0EEA-4E12-94C6-70DBBB0957A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1E7C38-0EEA-4E12-94C6-70DBBB0957A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1E7C38-0EEA-4E12-94C6-70DBBB0957A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1E7C38-0EEA-4E12-94C6-70DBBB0957A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F40F65-DF9C-4471-ADD8-A1B39EC20B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F40F65-DF9C-4471-ADD8-A1B39EC20B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F40F65-DF9C-4471-ADD8-A1B39EC20B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F40F65-DF9C-4471-ADD8-A1B39EC20B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C08636F-506E-4CB2-9166-9FF586997642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C08636F-506E-4CB2-9166-9FF586997642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C08636F-506E-4CB2-9166-9FF586997642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C08636F-506E-4CB2-9166-9FF586997642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

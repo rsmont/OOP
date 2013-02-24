@@ -2,7 +2,7 @@
 using _01.DefineClass;
 
 
-class Main
+class MainClass
 {
     static void Main(string[] args)
     {
@@ -10,8 +10,8 @@ class Main
         gsm1.Model = "nokia";
         gsm1.Price = 199.99;
         gsm1.Owner = "Pencho";
-        gsm1.Manifacturer = "Nokia Corporation";
+        gsm1.Manufacturer = "Nokia Corporation";
         gsm1.display.size = 4.5;
-        gsm1.display.numberOfColors = 1000000;
+        gsm1.display.numberOfColors = "16M";
     }
 }

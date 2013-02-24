@@ -5,10 +5,10 @@ namespace _01.DefineClass
 {
     class Battery
     {
-        public string model { get; set; }
+        public string Model { get; set; }
 
-        public string hoursIdle { get; set; }
+        public int HoursIdle { get; set; }
 
-        public string hoursTalk { get; set; }
+        public int HoursTalk { get; set; }
     }
 }
