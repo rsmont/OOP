@@ -19,12 +19,11 @@ class MainClass
         gsm1.Display.Size = 4.5;
 
         gsm1.Owner = "Pencho";
-        //GSM gsm2 = GSM.IPhone4S;
+        Console.WriteLine(gsm1);
         
-        
-        //Console.WriteLine(gsm1);
+        GSM gsm2 = GSM.IPhone4S;
+        Console.WriteLine(gsm2);
 
-        //Console.WriteLine(gsm2);
         GSMTest gsm3 = new GSMTest(5);
         foreach (var item in gsm3)
         {
