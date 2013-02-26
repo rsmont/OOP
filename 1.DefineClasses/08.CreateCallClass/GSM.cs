@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
-namespace _04.OverrideToString
+namespace _08.CreateCallClass
 {
     class GSM
     {
@@ -72,13 +73,30 @@ namespace _04.OverrideToString
             }
         }
 
-        public GSM(string model, string manufacturer) : this(model, manufacturer, null, null)
+        private static GSM iphone4S;
+
+        public static GSM IPhone4S
+        {
+            get { return iphone4S; }
+        }
+
+        static GSM()
+        {
+            iphone4S = new GSM("4S", "Apple");
+        }
+
+        public GSM()
+        { 
+        }
+        public GSM(string model, string manufacturer)
         {
             this.Model = model;
             this.Manufacturer = manufacturer;
+            this.price = null;
+            this.owner = null;
         }
 
-        public GSM(string model, string manufacturer, decimal? price) : this(model, manufacturer, price, null)
+        public GSM(string model, string manufacturer, decimal price) : this(model, manufacturer)
         {
             if (price < 0)
             {
@@ -88,12 +106,11 @@ namespace _04.OverrideToString
             {
                 this.price = price;
             }
+            this.owner = null;
         }
 
-        public GSM(string model, string manufacturer, decimal? price, string owner)
+        public GSM(string model, string manufacturer, decimal price, string owner) : this(model, manufacturer, price)
         {
-            this.Model = model;
-            this.Manufacturer = manufacturer;
             if (price < 0)
             {
                 throw new ArgumentOutOfRangeException("Invalid value!");

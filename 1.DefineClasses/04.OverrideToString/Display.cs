@@ -39,13 +39,12 @@ namespace _04.OverrideToString
             }
         }
 
-        public Display()
+        public Display() : this(null, null)
         {
-            this.size = null;
-            this.numColors = null;
+
         }
 
-        public Display(double size)
+        public Display(double? size) : this(size, null)
         {
             if (size <= 0)
             {
@@ -55,10 +54,9 @@ namespace _04.OverrideToString
             {
                 this.size = size;
             }
-            this.numColors = null;
         }
 
-        public Display(double size, int colors)
+        public Display(double? size, int? numColors)
         {
             if (size <= 0)
             {
@@ -68,13 +66,13 @@ namespace _04.OverrideToString
             {
                 this.size = size;
             }
-            if (colors < 1)
+            if (numColors < 1)
             {
                 throw new ArgumentOutOfRangeException("Invalid colors value!");
             }
             else
             {
-                this.numColors = colors;
+                this.numColors = numColors;
             }
         }
     }

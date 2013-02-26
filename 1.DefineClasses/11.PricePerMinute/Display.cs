@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _07.GSMTest
+namespace _11.PricePerMinute
 {
     class Display
     {

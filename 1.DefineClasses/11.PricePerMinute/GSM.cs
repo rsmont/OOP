@@ -1,13 +1,68 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
-namespace _04.OverrideToString
+namespace _11.PricePerMinute
 {
     class GSM
     {
         public Display Display = new Display();
         public Battery Battery = new Battery("");
         public Battery.BatteryType TypeOfBattery;
+        private static readonly List<Call> callHistory = new List<Call>();
+
+        public List<Call> CallHistory
+        {
+            get
+            {
+                return callHistory;
+            }
+        }
+
+        public void AddCallToHistory(Call call)
+        {
+            callHistory.Add(call);
+        }
+
+        public bool DeleteCallFromHistory(Call call)
+        {
+            for (int i = 0; i < callHistory.Count; i++)
+            {
+                if (callHistory[i].Date == call.Date &&
+                    callHistory[i].Time == call.Time &&
+                    callHistory[i].DialedPhone == call.DialedPhone &&
+                    callHistory[i].Duration == call.Duration)
+                {
+                    callHistory.RemoveAt(i);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void ClearHistory()
+        {
+            callHistory.Clear();
+        }
+
+        private decimal pricePerMinute;
+
+        public decimal PricePerMinute
+        {
+            get { return pricePerMinute; }
+            set { pricePerMinute = value; }
+        }
+
+
+        public decimal CallPrice(decimal pricePerMinute)
+        {
+            decimal totalCalls = 0;
+            foreach (var item in callHistory)
+            {
+                totalCalls += (decimal)item.Duration;
+            }
+            return totalCalls * pricePerMinute;
+        }
 
         private string model;
 
@@ -72,13 +127,34 @@ namespace _04.OverrideToString
             }
         }
 
-        public GSM(string model, string manufacturer) : this(model, manufacturer, null, null)
+        private static readonly GSM iphone4S;
+
+        public static GSM IPhone4S
+        {
+            get
+            {
+                return iphone4S;
+            }
+        }
+
+        static GSM()
+        {
+            iphone4S = new GSM("4S", "Apple");
+        }
+
+        public GSM()
+        { 
+        }
+
+        public GSM(string model, string manufacturer)
         {
             this.Model = model;
             this.Manufacturer = manufacturer;
+            this.price = null;
+            this.owner = null;
         }
 
-        public GSM(string model, string manufacturer, decimal? price) : this(model, manufacturer, price, null)
+        public GSM(string model, string manufacturer, decimal price) : this(model, manufacturer)
         {
             if (price < 0)
             {
@@ -88,12 +164,11 @@ namespace _04.OverrideToString
             {
                 this.price = price;
             }
+            this.owner = null;
         }
 
-        public GSM(string model, string manufacturer, decimal? price, string owner)
+        public GSM(string model, string manufacturer, decimal price, string owner) : this(model, manufacturer, price)
         {
-            this.Model = model;
-            this.Manufacturer = manufacturer;
             if (price < 0)
             {
                 throw new ArgumentOutOfRangeException("Invalid value!");
