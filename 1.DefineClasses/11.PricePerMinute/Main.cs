@@ -12,7 +12,7 @@ class MainClass
 
         gsm1.Battery.HoursIdle = 120;
         gsm1.Battery.HoursTalk = 12;
-        gsm1.TypeOfBattery = Battery.BatteryType.NiCd;
+        gsm1.TypeOfBattery = Battery.BatteryType.NiCd;  
         gsm1.Battery.Model = "China";
         gsm1.Display.NumberOfColors = 16;
         gsm1.Display.Size = 4.5;
