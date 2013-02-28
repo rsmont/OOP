@@ -7,6 +7,7 @@ class MainClass
     static void Main(string[] args)
     {
         GSM gsm1 = new GSM("Nokia", "Nokia Corp");
+        GSM gsm2 = new GSM("Apple", "Apple Inc.");
 
         gsm1.Price = 1300;
 
@@ -16,9 +17,12 @@ class MainClass
         gsm1.Battery.Model = "China";
         gsm1.Display.NumberOfColors = 16;
         gsm1.Display.Size = 4.5;
-        Call call = new Call("26.2.2013", "12:00", 0887698631, 123);
-        gsm1.AddCallToHistory(call);
+        gsm1.AddCallToHistory("26.2.2013", "12:00", 0887698631, 123);
+        gsm1.AddCallToHistory("27.2.2013", "12:00", 0887698631, 123);
+
+        gsm1.AddCallToHistory("28.2.2013", "12:00", 0887698631, 123);
         gsm1.Owner = "Pencho";
+        
         
         Console.WriteLine(gsm1);
 

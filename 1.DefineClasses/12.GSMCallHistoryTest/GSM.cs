@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _11.PricePerMinute
+namespace _12.GSMCallHistoryTest
 {
     class GSM
     {
@@ -12,11 +12,11 @@ namespace _11.PricePerMinute
         {
             get
             {
-                return this.display;
+                return display;
             }
             set
             {
-                this.display = value;
+                display = value;
             }
         }
 
@@ -34,16 +34,7 @@ namespace _11.PricePerMinute
             }
         }
 
-        public Battery.BatteryType TypeOfBattery;
-        
-        private  readonly List<Call> callHistory = new List<Call>();
-
-        public List<Call> CallHistory
-        {
-            get { return this.callHistory; }
-        } 
-
-        public void AddCallToHistory(string date, string time, uint dialedPhone, ulong duration)
+        public virtual void AddCallToHistory(string date, string time, string dialedPhone, ulong duration)
         {
             Call call = new Call(date, time, dialedPhone, duration);
             callHistory.Add(call);
@@ -65,6 +56,16 @@ namespace _11.PricePerMinute
             return false;
         }
 
+        private readonly List<Call> callHistory = new List<Call>();
+
+        public List<Call> CallHistory
+        {
+            get
+            {
+                return this.callHistory;
+            }
+        }
+
         public void ClearHistory()
         {
             callHistory.Clear();
@@ -74,19 +75,25 @@ namespace _11.PricePerMinute
 
         public decimal PricePerMinute
         {
-            get { return pricePerMinute; }
-            set { pricePerMinute = value; }
+            get
+            {
+                return pricePerMinute;
+            }
+            set
+            {
+                pricePerMinute = value;
+            }
         }
 
-
-        public decimal CallPrice(decimal pricePerMinute)
+        public decimal CalculatePrice()
         {
+
             decimal totalCalls = 0;
             foreach (var item in callHistory)
             {
-                totalCalls += (decimal)item.Duration;
+                totalCalls += ((decimal)item.Duration/60);
             }
-            return totalCalls * pricePerMinute;
+            return totalCalls * this.pricePerMinute;
         }
 
         private string model;
@@ -103,13 +110,13 @@ namespace _11.PricePerMinute
             }
         }
 
-        private decimal? price;
+        private decimal? phoneprice;
 
-        public decimal? Price
+        public decimal? PhonePrice
         {
             get
             {
-                return price;
+                return phoneprice;
             }
             set
             {
@@ -119,7 +126,7 @@ namespace _11.PricePerMinute
                 }
                 else
                 {
-                    this.price = value;
+                    this.phoneprice = value;
                 }
             }
         }
@@ -175,7 +182,7 @@ namespace _11.PricePerMinute
         {
             this.Model = model;
             this.Manufacturer = manufacturer;
-            this.price = null;
+            this.phoneprice = null;
             this.owner = null;
         }
 
@@ -187,7 +194,7 @@ namespace _11.PricePerMinute
             }
             else
             {
-                this.price = price;
+                this.phoneprice = price;
             }
             this.owner = null;
         }
@@ -200,7 +207,7 @@ namespace _11.PricePerMinute
             }
             else
             {
-                this.price = price;
+                this.phoneprice = price;
             }
             this.owner = owner;
         }
@@ -212,7 +219,7 @@ namespace _11.PricePerMinute
             str.Append(Environment.NewLine);
             str.Append("GSM Manufacturer: " + Manufacturer);
             str.Append(Environment.NewLine);
-            str.Append("GSM Price: " + Price + " лв.");
+            str.Append("GSM Price: " + PhonePrice + " лв.");
             str.Append(Environment.NewLine);
             str.Append(Environment.NewLine);
             str.Append("Battery Model: " + Battery.Model);

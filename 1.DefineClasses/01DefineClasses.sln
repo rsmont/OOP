@@ -23,9 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.AddDeleteCall", "10.AddD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.PricePerMinute", "11.PricePerMinute\11.PricePerMinute.csproj", "{3B9639DD-D4C0-4B81-B9D5-9628890F4079}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.GSMCallHistoryTest", "12.GSMCallHistoryTest\12.GSMCallHistoryTest.csproj", "{92468C90-3A06-410B-95E6-C44BE655EC88}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 12
+		SccNumberOfProjects = 13
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://luzterin.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -62,6 +64,9 @@ Global
 		SccProjectUniqueName11 = 11.PricePerMinute\\11.PricePerMinute.csproj
 		SccProjectName11 = 11.PricePerMinute
 		SccLocalPath11 = 11.PricePerMinute
+		SccProjectUniqueName12 = 12.GSMCallHistoryTest\\12.GSMCallHistoryTest.csproj
+		SccProjectName12 = 12.GSMCallHistoryTest
+		SccLocalPath12 = 12.GSMCallHistoryTest
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -112,6 +117,10 @@ Global
 		{3B9639DD-D4C0-4B81-B9D5-9628890F4079}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9639DD-D4C0-4B81-B9D5-9628890F4079}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9639DD-D4C0-4B81-B9D5-9628890F4079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92468C90-3A06-410B-95E6-C44BE655EC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92468C90-3A06-410B-95E6-C44BE655EC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92468C90-3A06-410B-95E6-C44BE655EC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92468C90-3A06-410B-95E6-C44BE655EC88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

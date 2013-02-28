@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _10.AddDeleteCall
+namespace _12.GSMCallHistoryTest
 {
     class Battery
     {
@@ -47,17 +47,24 @@ namespace _10.AddDeleteCall
             }
         }
 
+        public enum BatteryType
+        {
+            LiIon,
+            NiMH,
+            NiCd,
+        }
+
         private BatteryType typeOfBattery;
 
         public BatteryType TypeOfBattery
         {
             get
             {
-                return typeOfBattery;
+                return this.typeOfBattery;
             }
             set
             {
-                typeOfBattery = value;
+                this.typeOfBattery = value;
             }
 
         }
@@ -116,11 +123,6 @@ namespace _10.AddDeleteCall
             }
         }
 
-        public enum BatteryType
-        { 
-            LiIon,
-            NiMH,
-            NiCd,
-        }
+        
     }
 }
