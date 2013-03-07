@@ -26,13 +26,12 @@ namespace _01.CreateStructPoint3D
             Path path = new Path();
             path.Add(pointOne);
             path.Add(pointTwo);
-
             PathStorage.SavePath(path, @"../../Points3d.txt");
 
-            Path tempPath = PathStorage.LoadPath(@"../../Points3d.txt");
+            Path newLoadedPath = PathStorage.LoadPath(@"../../Points3d.txt");
 
             Console.WriteLine();
-            foreach (var item in tempPath.Paths)
+            foreach (var item in newLoadedPath.Paths)
             {
                 Console.WriteLine(item);
             }
