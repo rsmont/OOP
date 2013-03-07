@@ -18,7 +18,7 @@ class MainClass
         gsm1.Owner = "Pencho";
         Console.WriteLine(gsm1);
 
-
+        //todo: asdf
         GsmCallHistoryTest testPhone = new GsmCallHistoryTest();
         testPhone.AddSomeCalls(5);
         
